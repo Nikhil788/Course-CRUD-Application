@@ -1,0 +1,28 @@
+package com.app.demo.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.app.demo.Entities.Courses;
+
+@Service
+public class CourseServiceImpl implements CourseService {
+
+	
+	List <Courses> list;
+	public CourseServiceImpl() {
+		list = new ArrayList<>();
+		list.add(new Courses(145,"java core","basics of java"));
+		list.add(new Courses(234,"j2ee","advanced java springboot"));
+		
+	}
+	@Override
+	public List<Courses> getCourses() {
+		// TODO Auto-generated method stub
+		return list;
+	}
+	
+
+}
